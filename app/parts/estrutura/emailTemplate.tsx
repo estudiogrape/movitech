@@ -1,6 +1,8 @@
-import { ContatoTypes } from "../Componentes/ContatoFormHome";
+import { ContatoTypes } from "../Componentes/ContatoFormHome2";
 
-export function EmailTemplate(body: ContatoTypes) {
+
+export function EmailTemplate(body: ContatoTypes
+) {
     return (
         <div>
             <h1>Contato Site - Movitech</h1>
