@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-import { faInfo } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContentLinks from "../dados/contentLinks";
 
 export default function Banner() {
@@ -17,16 +15,13 @@ export default function Banner() {
                         </h2>
                         <h2 className="text-base lg:text-lg xl:text-xl text-white font-light !leading-tight">
                             Somos especialistas em manutenção preventiva,
-                            diagnóstico e reparos. Transparência e qualidade em cada
+                            diagnóstico reparos e mecânica especializada. Transparência e qualidade em cada
                             serviço.
                         </h2>
                         <div className="flex gap-2 mt-2">
                             <Link href={ContentLinks.whatsapp}>
                                 <button className="flex flex-row gap-2  rounded-lg  py-2 px-8 md:px-6  lg:px-12  bg-yellow-500 text-black text-xs md:text-base lg:text-lg xl:text-xl uppercase font-bold items-center">
-                                    <FontAwesomeIcon
-                                        icon={faInfo}
-                                        className="w-4 h-4  lg:w-6 lg:h-6 "
-                                    />
+                                   
                                     QUERO SABER MAIS
                                 </button>
                             </Link>

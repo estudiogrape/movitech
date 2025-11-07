@@ -16,8 +16,8 @@ const ContentLinks = {
     linkedin: 'https://www.linkedin.com/company/',
     linkedinShow: '',
 
-    instagram: 'https://instagram.com/',
-    instagramShow: '',
+    instagram: 'https://instagram.com/movitech.oficina',
+    instagramShow: '@movitech.oficina',
 
 	youtube: 'https://www.youtube.com/',
     youtubeShow: '',

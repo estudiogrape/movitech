@@ -34,7 +34,7 @@ export default function Rodape() {
 
           <div className="my-3 col-span-1">
             <Link href={ContentLinks.whatsapp}>
-              <button className="bg-yellow-500 flex flex-row gap-2  place-items-center rounded-md  py-2 px-8 md:py-2 md:px-12 text-white text-base md:text-lg uppercase font-light">
+              <button className="bg-yellow-500 flex flex-row gap-2  place-items-center rounded-md  py-2 px-8 md:py-2 md:px-12 text-white text-sm md:text-base lg:text-lg  uppercase font-light">
                 <FontAwesomeIcon
                   icon={faHeadphones}
                   className="  md:h-6 md:w-6"
