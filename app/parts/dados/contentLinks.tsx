@@ -25,7 +25,7 @@ const ContentLinks = {
     site: '',
     siteShow: '',
 
-	maps: 'https://maps.app.goo.gl/',
+	maps: 'https://maps.app.goo.gl/FLd11o7JW4haLDBTA',
     address1: 'R. Dr. Pálvaro da Silva, Qd 044 - Lt 022 ',
     address2: ' Maravista, Niterói - RJ, 24320-330',
 };

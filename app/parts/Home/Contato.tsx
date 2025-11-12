@@ -1,4 +1,4 @@
-import ContatoFormHome2 from "@/app/parts/Componentes/ContatoFormHome2";
+import ContatoFormHome from "@/app/parts/Componentes/ContatoFormHome";
 import ContentLinks from "@/app/parts/dados/contentLinks";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -23,7 +23,7 @@ export default function Contato() {
                                     Preencha nosso formulário ou entre em contato conosco {" "}
                                     para tirar dúvidas ou falar diretamente com nossa equipe!{" "}
                                 </p>
-                                <ContatoFormHome2 home />
+                                <ContatoFormHome />
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 text-black rounded-xl">

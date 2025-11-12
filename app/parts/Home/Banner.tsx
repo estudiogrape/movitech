@@ -15,7 +15,7 @@ export default function Banner() {
                         </h2>
                         <h2 className="text-base lg:text-lg xl:text-xl text-white font-light !leading-tight">
                             Somos especialistas em manutenção preventiva,
-                            diagnóstico reparos e mecânica especializada. Transparência e qualidade em cada
+                            diagnóstico, reparos e mecânica especializada. Transparência e qualidade em cada
                             serviço.
                         </h2>
                         <div className="flex gap-2 mt-2">

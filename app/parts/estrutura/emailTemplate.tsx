@@ -1,5 +1,4 @@
-import { ContatoTypes } from "../Componentes/ContatoFormHome2";
-
+import { ContatoTypes } from "../Componentes/ContatoFormHome";
 
 export function EmailTemplate(body: ContatoTypes) {
     return (
