@@ -1,60 +1,100 @@
 "use client";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import "@splidejs/react-splide/css";
 import React from "react";
-import { serviceList } from "@/app/parts/dados/contentSeguro";
+import { serviceList } from "@/app/parts/dados/contentServicos";
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ContentLinks from "../dados/contentLinks";
+import Pontos from "@/public/img/pontos-orange.png";
+import Chevron from "@/public/img/chevron.png";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import HeaderTitle from "../estrutura/headerTitle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion, Variants } from "framer-motion";
 
-export default function Seguro() {
-    return (
-        <div className="bg-black  relative" id="seguro">
-            <HeaderTitle title="Serviços" text="text-white" />
-            <div className="container mx-auto  relative pb-8 lg:pb-16 " id="servicos">
-                <div className="grid grid-col-1 gap-4 lg:gap-8 place-items-center w-full  ">
-                    <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-4 px-4 ">
-                        {serviceList.map((serviceSingle) => (
-                            <div
-                                key={serviceSingle.slug}
-                                className="h-full text-yellow-300 break-words relative"
-                            >
-                                <div className="flex justify-center items-center ">
-                                    <Image
-                                        src={serviceSingle.img}
-                                        alt=""
-                                        className="w-full h-[8rem] md:h-[10rem] lg:h-[15rem] object-cover rounded-2xl md:rounded-3xl"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
 
-                                    <div className=" absolute flex bottom-4 w-fulll ">
-                                        <h3 className="flex  text-[0.6rem] md:text-sm lg:text-xl xl:text-2xl font-semibold leading-tight uppercase  text-center  ">
-                                            {serviceSingle.title}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="flex items-center justify-center md:justify-start  my-4">
-                        <Link href="/contato">
-                            <button
-                                type="button"
-                                className="flex flex-row gap-2 justify-center rounded-lg  py-2 px-8 md:px-6  lg:px-12  bg-yellow-500  text-black items-center text-xs md:text-base lg:text-xl uppercase font-medium"
-                            >
-                                <FontAwesomeIcon
-                                    icon={faPhone}
-                                    className=" h-3  w-3 lg:h-6 lg:w-6 mr-2"
-                                />
-                                <span>tenho interesse!</span>
-                            </button>
-                        </Link>
-                    </div>
-                </div>
-            </div>
+export default function Servicos() {
+  return (
+    <div className="bg-trueGray-601 overflow-hidden relative" id="seguro">
+      <div
+        className="container mx-auto px-4 relative pb-8 lg:pb-16"
+        id="servicos"
+      >
+        <div className="relative py-8 text-center">
+          <h3 className="text-orange-400 text-xl md:text-2xl lg:text-4xl font-bold">
+            Nossos Serviços
+          </h3>
+          <div className="absolute right-0 bottom-7 md:bottom-5 xl:bottom-4 2xl:bottom-3 -translate-y-1/2 ">
+            <Image
+              src={Chevron}
+              alt=""
+              className="
+        max-w-[40px] sm:max-w-[50px] md:max-w-[60px]
+        lg:max-w-[70px] xl:max-w-[80px] 2xl:max-w-[90px]
+        w-auto h-auto object-contain
+      "
+            />
+          </div>
         </div>
-    );
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  text-lg md:text-xl lg:text-base xl:text-xl ">
+          {serviceList.map((serviceSingle) => (
+            <motion.div
+              key={serviceSingle.slug}
+              className="relative"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
+              <div className="w-full h-full gap-2 md:gap-6 hover:scale-105 transition duration-300 ease-in-out">
+                <div className="grid ">
+                  <Image
+                    src={serviceSingle.img}
+                    alt=""
+                    className="w-full h-auto sm:h-full rounded-3xl object-cover"
+                  />
+                  <div className="p-4 2xl:p-6 text-white absolute inset-0 flex flex-col justify-end gap-2 leading-none">
+                    <p className="text-lg md:text-base lg:text-lg xl:text-xl font-semibold">
+                      {serviceSingle.title}
+                    </p>
+                    <p className="text-base md:text-sm lg:text-lg xl:text-xl font-medium">
+                      {serviceSingle.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="flex items-center justify-center mt-5 lg:mt-10 relative">
+          <div className="flex">
+            <Image
+              src={Pontos}
+              alt=""
+              className="absolute left-0 w-auto h-auto top-0"
+            />
+          </div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <Link href={ContentLinks.whatsapp}>
+              <button className="flex items-center justify-center gap-3 rounded-full py-2 px-6 md:px-6 lg:px-10 text-trueGray-601 bg-orange-400 text-xs md:text-base uppercase font-light transition duration-300 ease-in-out hover:bg-orange-500">
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  className="w-5 h-5 md:w-3 md:h-3 lg:w-4 lg:h-4"
+                />
+                quero saber mais
+              </button>
+            </Link>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
 }

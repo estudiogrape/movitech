@@ -1,9 +1,9 @@
 "use client";
 import axios from "axios";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, Variants } from "framer-motion";
 
 export interface ContatoTypes {
@@ -22,23 +22,18 @@ const fadeInUp:Variants = {
   },
 };
 
-
-
 export default function ContatoForm() {
-    const { register, handleSubmit, reset } = useForm<ContatoTypes>();
-    const [message, setMessage] = useState<string>("");
-    const [colorMessage, setColorMessage] = useState<string>("bg-teal-700");
+  const { register, handleSubmit, reset } = useForm<ContatoTypes>();
+  const [message, setMessage] = useState<string>("");
+  const [colorMessage, setColorMessage] = useState<string>("bg-teal-700");
 
-    function onSubmitSend(data: ContatoTypes) {
+  function onSubmitSend(data: ContatoTypes) {
     if (data.nome == null || data.nome.length < 3) {
       setMessage("O nome digitado não é válido");
-      setColorMessage("bg-red-700");
     } else if (data.email == null || data.email.length < 5) {
       setMessage("O e-mail digitado não é válido");
-      setColorMessage("bg-red-700");
     } else if (data.telefone == null || data.telefone.length < 7) {
       setMessage("O telefone digitado não é válido");
-      setColorMessage("bg-red-700");
     } else if (
       !data.email
         .toLowerCase()
@@ -84,7 +79,7 @@ export default function ContatoForm() {
           <motion.input
             key={field}
             {...register(field as keyof ContatoTypes)}
-            className={`border-2 border-trueGray-200 text-base lg:text-lg 2xl:text-xl font-light py-3 md:py-3 lg:py-4 block w-full rounded-xl placeholder-trueGray-400 outline-none px-4 transition duration-300 ease-in-out focus:ring-2 focus:ring-black focus:border-black ${
+            className={`border-2 border-trueGray-200 text-base lg:text-lg 2xl:text-xl font-light py-3 md:py-3 lg:py-4 block w-full rounded-xl placeholder-trueGray-400 outline-none px-4 transition duration-300 ease-in-out focus:ring-2 focus:ring-orange-400 focus:border-orange-400 ${
               field === "nome" ? "lg:col-span-2" : "col-span-1"
             }`}
             placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
@@ -95,7 +90,7 @@ export default function ContatoForm() {
 
       <motion.button
         type="submit"
-        className="my-3 flex place-items-center gap-2 md:gap-4 bg-black transition-all rounded-lg text-white text-xs md:text-base py-2 px-8 md:px-6 lg:px-8 font-normal uppercase hover:scale-105"
+        className="my-3 flex place-items-center gap-2 md:gap-4 bg-orange-400 transition-all rounded-full text-white text-xs md:text-base py-2 px-8 md:px-6 lg:px-8 font-normal uppercase hover:scale-105"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         transition={{ type: "spring", stiffness: 300 }}

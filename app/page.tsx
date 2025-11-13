@@ -2,6 +2,8 @@ import Banner from "@/app/parts/Home/Banner";
 import Sobre from "@/app/parts/Home/QuemSomos";
 import Servicos from "@/app/parts/Home/Servicos";
 import Contato from "@/app/parts/Home/Contato";
+import Depoimento from "@/app/parts/Home/Clientes";
+
 
 export default function Home() {
     return (
@@ -9,6 +11,7 @@ export default function Home() {
             <Banner />
             <Sobre />
             <Servicos />
+            <Depoimento />
             <Contato />
         </div>
     );

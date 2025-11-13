@@ -1,33 +1,27 @@
 const ContentLinks = {
     titleSite: 'imagem',
 
-	email: 'mailto:contato@movitech.com.br',
-    emailShow: 'contato@movitech.com.br',
+	email: 'mailto:contato@renquip.com.br',
+    emailShow: 'contato@renquip.com.br',
 
-	phone: 'tel:+5521991398950',
-    phoneShow: '(21) 99139-8950',
+	phone: 'tel:+5521998916691',
+    phoneShow: '(21)99891-6691',
 
-	whatsapp: 'https://wa.me/5521991398950',
-    whatsappShow: '(21) 99139-8950',
+	whatsapp: 'https://wa.me/5521998916691',
+    whatsappShow: '(21) 99891-6691',
     
-	facebook: 'https://www.facebook.com/',
-    facebookShow: '/',
+    linkedin: 'https://www.linkedin.com/company/renquip-logistica',
+    linkedinShow: '/renquip-logistica',
 
-    linkedin: 'https://www.linkedin.com/company/',
-    linkedinShow: '',
-
-    instagram: 'https://instagram.com/movitech.oficina',
-    instagramShow: '@movitech.oficina',
-
-	youtube: 'https://www.youtube.com/',
-    youtubeShow: '',
+    instagram: 'https://instagram.com/renquip',
+    instagramShow: '@renquip',
 
     site: '',
     siteShow: '',
 
-	maps: 'https://maps.app.goo.gl/FLd11o7JW4haLDBTA',
-    address1: 'R. Dr. Pálvaro da Silva, Qd 044 - Lt 022 ',
-    address2: ' Maravista, Niterói - RJ, 24320-330',
+	maps: 'https://maps.app.goo.gl/stVT6KqzHEUkvaP46',
+    address1: 'Rio de Janeiro',
+    address2: '',
 };
 
 export default ContentLinks;
