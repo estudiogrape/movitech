@@ -22,7 +22,7 @@ export default function Banner() {
                             <Link href={ContentLinks.whatsapp}>
                                 <button className="flex flex-row gap-2  rounded-lg  py-2 px-8 md:px-6  lg:px-12  bg-yellow-500 text-black text-xs md:text-base lg:text-lg xl:text-xl uppercase font-bold items-center">
                                    
-                                    QUERO SABER MAIS
+                                    quero saber mais
                                 </button>
                             </Link>
                         </div>
