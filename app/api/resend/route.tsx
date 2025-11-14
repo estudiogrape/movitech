@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     try {
         const data = await resend.emails.send({
             from: 'Movitech <noreply@oficinamovitech.com.br>',
-            to: ['contato@oficinamovitech.com.br', 'fabiofreitassilvacontato@gmail.com'],
+            to: ['contato@oficinamovitech.com.br', 'hevertondepinho@gmail.com'],
             subject: 'Movitech - Contato - Site',
             react: EmailTemplate(body),
         });
