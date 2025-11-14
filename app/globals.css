@@ -29,7 +29,7 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-    @apply bg-orange-400;
+    @apply bg-white;
 }
 
 .hamburger-box {
@@ -47,7 +47,7 @@
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-    @apply bg-orange-400;
+    @apply bg-white;
     width: 40px;
     height: 4px;
     border-radius: 4px;
@@ -108,9 +108,4 @@
     transition:
         bottom 0.075s ease,
         transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-/* Trava o scroll do body quando o menu estiver aberto */
-.no-scroll {
-    overflow: hidden;
 }

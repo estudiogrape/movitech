@@ -8,9 +8,9 @@ export default function NotFound() {
                 <HeaderTitle title="Não Encontrado" text=""/>
                 <div className="flex flex-col items-center justify-between pt-10 pb-20">
                     <div className="flex flex-col">
-                        <span className="text-lg md:text-xl text-center font-bold my-10 text-trueGray-500 uppercase font-barlow">Renquip - Logística Integrada</span>
+                        <span className="text-lg md:text-xl text-center font-bold my-10 text-zinc-700 uppercase font-barlow">movitech</span>
                         <div className="flex flex-col items-center">
-                            <div className="text-orange-400 font-bold text-2xl md:text-5xl">
+                            <div className="text-yellow-500 font-bold text-2xl md:text-5xl">
                                 Página Não encontrada
                             </div>
                             <div className="text-sm md:text-lg lg:text-xl  xl:text-2xl  mt-5">

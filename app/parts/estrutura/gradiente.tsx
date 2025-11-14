@@ -1,11 +1,5 @@
-interface PropsGradiente {
-  classColor: string;
-}
-
-
-export default function Gradiente(props: PropsGradiente) {
-     const gradiColor = props.classColor;
+export default function Gradiente() {
     return (
-        <div className= {`${gradiColor}  h-2.5 w-full` } /> 
+        <div className="bg-yellow-500 h-2.5 w-full"></div>
     )
 }

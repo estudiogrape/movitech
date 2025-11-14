@@ -5,8 +5,8 @@ import { Poppins } from "next/font/google";
 const poppins = Poppins({ subsets: ['latin'], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] })
 
 export const metadata: Metadata = {
-    title: "Renquip - Logística Integrada",
-    description: "Locação de equipamentos industriais com segurança, agilidade e confiança.",
+    title: "Movitech",
+    description: "Somos especialistas em manutenção preventiva, diagnóstico e reparos. Transparência e qualidade em casa serviço.",
 };
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {

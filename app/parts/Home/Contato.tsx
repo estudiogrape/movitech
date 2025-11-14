@@ -1,121 +1,92 @@
-"use client";
+import ContatoFormHome from "@/app/parts/Componentes/ContatoFormHome";
 import ContentLinks from "@/app/parts/dados/contentLinks";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ContatoFormHome2 from "@/app/parts/Componentes/ContatoFormHome2";
 import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { motion, Variants } from "framer-motion";
-
-const container = {
-    hidden: {},
-    visible: {
-        transition: {
-            staggerChildren: 0.2,
-        },
-    },
-};
-
-const fadeInUp:Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.5, ease: "easeOut" },
-    },
-};
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import HeaderTitle from "../estrutura/headerTitle";
 
 export default function Contato() {
     return (
-        <section id="contato" className="pb-8 md:pb-16">
-            <div className="container mx-auto px-4 relative" id="contato">
-                <div className="grid items-center justify-center py-6 md:py-10">
-                    <h3 className="text-orange-400 text-xl md:text-2xl lg:text-4xl font-bold">
-                        Contato
-                    </h3>
-                </div>
-                <div className="md:flex gap-x-8 text-black">
-                    <motion.div
-                        className="w-full md:w-1/2"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={fadeInUp}
-                    >
-                        <div className="bg-white md:p-8 md:text-left transition duration-300 ease-in-out hover:scale-[1.01]">
-                            <h3 className="font-bold pb-4 text-trueGray-700 text-sm md:text-base lg:text-lg xl:text-2xl md:uppercase">
-                                Possui alguma dúvida?
-                            </h3>
-                            <p className="text-xs md:text-base text-trueGray-700">
-                                Preencha nosso formulário ou entre em contato conosco para tirar
-                                dúvidas ou falar diretamente com nossa equipe!
-                            </p>
-                            <ContatoFormHome2  />
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        className="w-full md:w-1/2 text-black rounded-xl pt-6 md:pt-0"
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={container}
-                    >
-                        <div className="text-md md:text-lg md:p-8">
-                            <motion.div
-                                className="text-sm md:text-base lg:text-lg xl:text-2xl pb-4 md:text-left"
-                                variants={fadeInUp}
-                            >
-                                <h3 className="font-bold pb-4 text-trueGray-700 md:uppercase">
-                                    Será um prazer te atender!
+        <div className="bg-white relative">
+            <HeaderTitle title="Contato" text="text-black" />
+            <section id="contato" className="pb-8 md:pb-16">
+                <div className="container mx-auto px-4" id="contato">
+                    <div className="md:flex  lg:gap-x-8 text-black">
+                        <div className="w-full md:w-1/2">
+                            <div className="bg-white p-4 lg:p-8">
+                                <h3 className="text-black  text-center md:text-start text-base lg:text-lg xl:text-2xl font-bold pb-4">
+                                    {" "}
+                                    POSSUI ALGUMA DÚVIDA?{" "}
                                 </h3>
-                                <p className="text-xs md:text-base text-trueGray-700">
-                                    Envie uma mensagem em nosso WhatsApp, mande um e-mail ou
-                                    faça-nos uma visita!
+                                <p className="text-xs sm:text-sm lg:text-base xl:text-xl text-black text-center md:text-start">
+                                    {" "}
+                                    Preencha nosso formulário ou entre em contato conosco {" "}
+                                    para tirar dúvidas ou falar diretamente com nossa equipe!{" "}
                                 </p>
-                            </motion.div>
-
-                            {[{
-                                href: ContentLinks.whatsapp,
-                                icon: faWhatsapp,
-                                label: "Whatsapp:",
-                                value: ContentLinks.whatsappShow
-                            }, {
-                                href: ContentLinks.email,
-                                icon: faEnvelope,
-                                label: "E-mail:",
-                                value: ContentLinks.emailShow
-                            }, {
-                                href: ContentLinks.maps,
-                                icon: faLocationDot,
-                                label: "Endereço:",
-                                value: ContentLinks.address1,
-                            }].map((item, index) => (
-                                <motion.a
-                                    key={index}
-                                    href={item.href}
-                                    target="_blank"
-                                    variants={fadeInUp}
-                                >
-                                    <div className="flex justify-start items-center lg:px-2 pt-4 pb-6 rounded-lg hover:bg-gray-100 break-all text-trueGray-601 text-sm md:text-base xl:text-xl transition duration-300 ease-in-out hover:scale-105">
-                                        <div className="px-4 md:px-6">
+                                <ContatoFormHome />
+                            </div>
+                        </div>
+                        <div className="w-full md:w-1/2 text-black rounded-xl">
+                            <div className="text-md md:text-lg p-4 lg:p-8">
+                                <div className="text-base lg:text-lg xl:text-2xl pb-4">
+                                    <h3 className="font-bold uppercase pb-4 text-black text-center md:text-start">
+                                        {" "}
+                                        Será um prazer te atender!{" "}
+                                    </h3>
+                                    <p className="text-xs sm:text-sm lg:text-base xl:text-xl text-black text-center md:text-start">
+                                        {" "}
+                                        Envie uma mensagem em nosso WhatsApp, mande um e-mail <br />{" "}
+                                        ou faça-nos uma visita!{" "}
+                                    </p>
+                                </div>
+                                <a href={ContentLinks.whatsapp} target="_blank">
+                                    <div className="flex justify-start items-center px-0 md:px-2 pt-4 pb-6 rounded-lg hover:bg-gray-100 break-all text-black text-sm lg:text-base xl:text-xl">
+                                        <div className="px-4 lg:px-6">
                                             <FontAwesomeIcon
-                                                icon={item.icon}
-                                                className="text-orange-400 h-10 w-10"
+                                                icon={faWhatsapp}
+                                                className="text-black h-7 w-7 lg:h-10 lg:w-10 xl:h-12 xl:w-12"
                                             />
                                         </div>
                                         <div>
-                                            <div className="py-1 font-bold uppercase">{item.label}</div>
-                                            <div className="font-light text-trueGray-700 hover:text-zinc-600">
-                                                {item.value}
-                                            </div>
+                                            <div className="py-1 font-bold uppercase">WHATSAPP:</div>
+                                            <div>{ContentLinks.whatsappShow}</div>
                                         </div>
                                     </div>
-                                </motion.a>
-                            ))}
+                                </a>
+                                <a href={ContentLinks.email} target="_blank">
+                                    <div className="flex justify-start items-center px-0 md:px-2 pt-4 pb-6 rounded-lg hover:bg-gray-100 break-all text-black text-sm lg:text-base xl:text-xl ">
+                                        <div className="px-4 lg:px-6">
+                                            <FontAwesomeIcon
+                                                icon={faEnvelope}
+                                                className="text-black h-7 w-7 lg:h-10 lg:w-10 xl:h-12 xl:w-12"
+                                            />
+                                        </div>
+                                        <div>
+                                            <div className="py-1 font-bold uppercase">E-MAIL:</div>
+                                            <div className="whitespace-nowrap">{ContentLinks.emailShow}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href={ContentLinks.maps} target="_blank">
+                                    <div className="flex justify-start items-center px-0 md:px-2 pt-4 pb-6 rounded-lg hover:bg-gray-100 break-all text-black text-sm lg:text-base xl:text-xl">
+                                        <div className="px-4 lg:px-6">
+                                            <FontAwesomeIcon
+                                                icon={faLocationDot}
+                                                className="text-black h-7 w-7 lg:h-10 lg:w-10 xl:h-12 xl:w-12"
+                                            />
+                                        </div>
+                                        <div>
+                                            <div className="py-1 font-bold uppercase">ENDEREÇO:</div>
+                                            <div>{ContentLinks.address1}</div>
+                                            <div>{ContentLinks.address2}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 }
