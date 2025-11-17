@@ -1,8 +1,8 @@
 const ContentLinks = {
     titleSite: 'imagem',
 
-	email: 'mailto:contato@movitech.com.br',
-    emailShow: '@oficinamovitech',
+	email: 'mailto:contato@oficinamovitech.com.br',
+    emailShow: 'contato@oficinamovitech.com.br',
 
 	phone: 'tel:+5521991398950',
     phoneShow: '(21) 99139-8950',
